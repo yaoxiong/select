@@ -337,7 +337,8 @@ const Select = createClass({
         }
       } else if (isMultipleOrTags(props) && inputValue) {
         // why not use setState?
-        this.state.inputValue = this.getInputDOMNode().value = '';
+        // this.state.inputValue = this.getInputDOMNode().value = '';
+        this.state.inputValue = this.getInputDOMNode().value;
       }
       props.onBlur(this.getVLForOnChange(value));
     }, 10);
